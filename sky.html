@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sky and grass field</title>
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <!-- Asset Management System -->
+            <a-assets>
+                <img id="clear-sunny-sky" src="assets/clear-sunny-sky.jpg">
+                <a-asset-item id="catapult" src="assets/Flower.gltf"></a-asset-item>
+            </a-assets>
+            
+        
+            <!-- Ground | Realistic Style
+            <a-plane material="color: #FFFFFF;
+                               src: #floor;
+                               repeat: 5000 5000;
+                               normal-map: #floor-NRM;
+                               normal-texture-repeat: 5000 5000"
+                     rotation="-90 0 0"
+                     scale="10000 10000 1">
+            </a-plane> -->
+            
+            
+            <div id="flowers-container"></div>
+                        
+            <!-- catapult -->
+             <a-entity gltf-model="#catapult" scale="0.003 0.003 0.003" position="0 0 -20"  rotation="0 0 0">
+            </a-entity> 
+
+            
+            
+            <!-- Chão cinza -->
+            <a-plane material="color: #6caa2f;
+                               shader: flat"
+                     rotation="-90 0 0"
+                     scale="10000 10000 1">
+            </a-plane> 
+            
+            <!-- 360° Panorama -->
+            <a-sky src="#clear-sunny-sky"></a-sky>
+            
+            
+                        <!-- Camera object -->
+            <!-- camera average height -->
+            <!-- VR experiences depends on the view eye level of the person who is seeing -->
+            <a-entity movement-controls="speed: 0.2" position="0 0 10">
+                <!--
+                    the position must not be placed on the camera object
+                    instead put it on a 'entity object'
+                -->
+                <!--
+                    The user height attribute is used to controll the height of the point of view that the user will
+                    assume in your VR experience
+                -->
+                <a-entity camera position="0 1.75 0" look-controls="pointerLockEnabled: true">
+                    <a-cursor></a-cursor>
+                </a-entity>
+            </a-entity>
+            
+
+
+            
+        </a-scene>
+        <script>
+//            var flowersContainer = document.querySelector('#flowers-container');
+//            
+//            var entity = null;
+//            for (var i = 0; i < 50; i++) {
+//                entity = document.createElement('a-entity');
+//                
+//                entity.setAttribute('gltf-model', '#catapult');
+//                entity.setAttribute('scale', '0.003 0.003 0.003');
+//                entity.setAttribute('position', '0 0 ' + (-i));
+//                entity.setAttribute('rotation', '0 0 0');
+//                
+//                flowersContainer.appendChild(entity);
+//            }
+//                
+            
+        </script>
+    </body>
+</html>

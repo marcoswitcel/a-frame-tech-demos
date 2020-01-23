@@ -1,17 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <title>Sky and grass field</title>
+        <meta charset="utf-8">
+        <title>Grass field</title>
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+        <!--<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>-->
     </head>
     
     <body>
         <a-scene>
+            <!--
+                Interessante
+            <a-entity id="rain" particle-system="preset: default; color: #24CAFF; particleCount: 5000"></a-entity>
+            -->
+
+            
             <!-- Asset Management System -->
             <a-assets>
                 <img id="clear-sunny-sky" src="assets/clear-sunny-sky.jpg">
-                <a-asset-item id="catapult" src="assets/Flower.gltf"></a-asset-item>
+                <a-asset-item id="white-flower-model" src="assets/Flower.gltf"></a-asset-item>
             </a-assets>
             
         
@@ -26,11 +34,13 @@
             </a-plane> -->
             
             
-            <div id="flowers-container"></div>
+            <a-entity id="flowers-container"></a-entity>
                         
-            <!-- catapult -->
-             <a-entity gltf-model="#catapult" scale="0.003 0.003 0.003" position="0 0 -20"  rotation="0 0 0">
+            <!-- white-flower-model -->
+<!--
+             <a-entity gltf-model="#white-flower-model" scale="0.003 0.003 0.003" position="0 0 -20"  rotation="0 0 0">
             </a-entity> 
+-->
 
             
             
@@ -48,7 +58,7 @@
                         <!-- Camera object -->
             <!-- camera average height -->
             <!-- VR experiences depends on the view eye level of the person who is seeing -->
-            <a-entity movement-controls="speed: 0.2" position="0 0 10">
+            <a-entity movement-controls="speed: 0.2" position="-13 0 10">
                 <!--
                     the position must not be placed on the camera object
                     instead put it on a 'entity object'
@@ -66,22 +76,7 @@
 
             
         </a-scene>
-        <script>
-//            var flowersContainer = document.querySelector('#flowers-container');
-//            
-//            var entity = null;
-//            for (var i = 0; i < 50; i++) {
-//                entity = document.createElement('a-entity');
-//                
-//                entity.setAttribute('gltf-model', '#catapult');
-//                entity.setAttribute('scale', '0.003 0.003 0.003');
-//                entity.setAttribute('position', '0 0 ' + (-i));
-//                entity.setAttribute('rotation', '0 0 0');
-//                
-//                flowersContainer.appendChild(entity);
-//            }
-//                
-            
-        </script>
+        <!-- Script da cena -->
+        <script src="js/main.js"></script>
     </body>
 </html>

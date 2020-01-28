@@ -2,14 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Grass field</title>
+        <title>Grass Field VR TechDemo</title>
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+        <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
+
         <!--<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>-->
     </head>
     
     <body>
-        <a-scene>
+        <!-- attach debug to see threejs stats on doom -->
+        <a-scene stats sound="on: model-loaded; src: #wind-sound">
             <!--
                 Interessante
             <a-entity id="rain" particle-system="preset: default; color: #24CAFF; particleCount: 5000"></a-entity>
@@ -19,14 +22,20 @@
             <!-- Asset Management System -->
             <a-assets>
                 <img id="clear-sunny-sky" src="assets/clear-sunny-sky.jpg">
+                <img id="floor" src="assets/floor.jpg">
                 <a-asset-item id="white-flower-model" src="assets/Flower.gltf"></a-asset-item>
+                <a-asset-item id="single-rose-model" src="assets/single-rose/model.gltf"></a-asset-item>
+                <a-asset-item id="ivy-model" src="assets/ivy/Ivy.gltf"></a-asset-item>
+                <a-asset-item id="log-cabin-model" src="assets/log-cabin/model.gltf"></a-asset-item>
+                <a-asset-item id="dor-model" src="assets/door/Door 2.gltf"></a-asset-item>
+                <audio id="wind-sound" src="assets/sounds/birds-wind-synth.ogg" preload="auto"></audio>
             </a-assets>
             
         
             <!-- Ground | Realistic Style
             <a-plane material="color: #FFFFFF;
                                src: #floor;
-                               repeat: 5000 5000;
+                               rewpeat: 5000 5000;
                                normal-map: #floor-NRM;
                                normal-texture-repeat: 5000 5000"
                      rotation="-90 0 0"
@@ -42,17 +51,54 @@
             </a-entity> 
 -->
 
+            <a-entity id="log-cabin-entity" gltf-model="#log-cabin-model" scale="12 12 12" position="200 -10 -100"  rotation="0 0 0">
+            </a-entity> 
             
+            <a-entity id="dor-model-entity" gltf-model="#dor-model" scale="0.01 0.01 0.01" position="-30 0 10"  rotation="0 -90 0">
+            </a-entity> 
+            
+             <a-entity light="type: ambient; intensity: 1">
+                <a-animation attribute="light.intensity"
+                             from="1"
+                             to="0.85"
+                             repeat="indefinite"
+                             direction="alternate"
+                             dur="3000">
+                </a-animation>
+            </a-entity>
+            
+            <!-- Custom Light | Point -->
+<!--
+            <a-entity light="type: point;
+                             intensity: 0.8;
+                             distance: 10;
+                             castShadow: true"
+                      position="0 0 0">
+                <a-animation attribute="light.intensity"
+                             from="1"
+                             to="0"
+                             repeat="indefinite"
+                             direction="alternate"
+                             dur="5000">
+                </a-animation>
+            </a-entity>
+-->
+            
+            
+<!--             <a-entity sound="on: model-loaded; src: #wind-sound"></a-entity>-->
             
             <!-- Chão cinza -->
-            <a-plane material="color: #6caa2f;
-                               shader: flat"
+            <a-plane src="#floor" material="color: #6caa2f; shader: flat"
                      rotation="-90 0 0"
-                     scale="10000 10000 1">
+                     scale="700 700 1"
+                     repeat="100 100"
+                     shadow="receive: true">
             </a-plane> 
             
             <!-- 360° Panorama -->
-            <a-sky src="#clear-sunny-sky"></a-sky>
+<!--            <a-sky src="#clear-sunny-sky"></a-sky>-->
+            <a-simple-sun-sky sun-position="-1 1 -1" light-color="#254ba0" dark-color="#142a5a" fog-color="#6a8ad2"></a-simple-sun-sky>
+
             
             
                         <!-- Camera object -->

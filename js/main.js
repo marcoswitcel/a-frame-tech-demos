@@ -10,12 +10,19 @@ var entity = null;
 for (var y = 0; y < flowers.x; y++) {
     for (var x = 0; x < flowers.y; x++) {
         (function(x, y) {
-            var delayForThisFlower = 350 * Math.floor( (x * y)/flowers.loadingAtTime );
+            var delayForThisFlower = 500 * Math.floor( (x * y)/flowers.loadingAtTime );
             
             setTimeout(function() {
-                var type = Math.floor(Math.random()*5);
-                var modelIdentifier = [ '#white-flower-model', '#single-rose-model',  '#white-flower-model', '#single-rose-model', '#ivy-model' ][type];
-                var scaleParameter = [ '0.003 0.003 0.003', '0.3 0.3 0.3', '0.003 0.003 0.003', '0.3 0.3 0.3', '0.3 0.3 0.3' ][type];
+                var type = Math.floor(Math.random()*9);
+                var modelIdentifier = [
+                    '#white-flower-model', '#single-rose-model',  '#white-flower-model', '#single-rose-model',
+                    '#white-flower-model', '#single-rose-model',  '#white-flower-model', '#single-rose-model',
+                    '#ivy-model'
+                ][type];
+                var scaleParameter = [
+                    '0.003 0.003 0.003', '0.3 0.3 0.3', '0.003 0.003 0.003', '0.3 0.3 0.3',
+                    '0.003 0.003 0.003', '0.3 0.3 0.3', '0.003 0.003 0.003', '0.3 0.3 0.3',
+                    '0.3 0.3 0.3' ][type];
                 
                 entity = document.createElement('a-entity');
 

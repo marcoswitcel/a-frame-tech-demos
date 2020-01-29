@@ -9,7 +9,7 @@ https://poly.google.com/view/dYQFgjU5Eqx
 https://poly.google.com/view/3oVamJsWVQ6
 
 ### Flower
-![Gif do modelo](blob/master/assets/floor.jpg?raw=true)
+![Gif do modelo](assets/floor.jpg?raw=true)
 https://poly.google.com/search/flower
 ### Apple Tree
 https://poly.google.com/view/cpg6wP8JCyQ

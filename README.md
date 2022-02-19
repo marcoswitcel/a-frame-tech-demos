@@ -9,22 +9,22 @@ Link para teste: [https://marcoswitcel.github.io/a-frame-tech-demos/](https://ma
 Links dos recursos visuais. Hoje o Google poly não existe mais. 
 
 ## Modelos das flores
-https://poly.google.com/view/eydI4__jXpi
-https://poly.google.com/view/dYQFgjU5Eqx
-https://poly.google.com/view/3oVamJsWVQ6
 
-### Flores
+* [https://poly.google.com/view/eydI4__jXpi](https://poly.google.com/view/eydI4__jXpi)
+* [https://poly.google.com/view/dYQFgjU5Eqx](https://poly.google.com/view/dYQFgjU5Eqx)
+* [https://poly.google.com/view/3oVamJsWVQ6](https://poly.google.com/view/3oVamJsWVQ6)
+* [https://poly.google.com/search/flower](https://poly.google.com/search/flower)
+
+## Textura do chão
 
 ![Gif do modelo](assets/floor.jpg?raw=true)
-https://poly.google.com/search/flower
 
-### Macieira
 
-https://poly.google.com/view/cpg6wP8JCyQ
+### Árvores
 
-### Outra Árvore
-
-https://poly.google.com/view/6pwiq7hSrHr
+* Macieira [https://poly.google.com/view/cpg6wP8JCyQ](https://poly.google.com/view/cpg6wP8JCyQ)
+* Outra: [https://poly.google.com/view/6pwiq7hSrHr](https://poly.google.com/view/6pwiq7hSrHr)
 
 # Sons
-https://opengameart.org/content/birds-and-wind-ambient-birds-wind-and-synth
+
+* Sons de pássaros, OpenGameArt: [https://opengameart.org/content/birds-and-wind-ambient-birds-wind-and-synth](https://opengameart.org/content/birds-and-wind-ambient-birds-wind-and-synth)
